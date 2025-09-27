@@ -1,49 +1,69 @@
-# Level description:
+# Level description
 
 In this level, you will be working with registers. You will be asked to modify or read from registers.
 
 In this level, you will work with multiple registers. Please set the following:
 
-    rax = 0x1337
-    r12 = 0xCAFED00D1337BEEF
-    rsp = 0x31337
+- RAX = 0x1337
+- R12 = 0xCAFED00D1337BEEF
+- RSP = 0x31337
 
-# Solution:
+# Solution
 
-1 - :~ nano solution.asm
-2 - :~ write in solution.asm =
+1. Create the file:
+```bash
+nano solution.asm
+```
+
+2. Write the following in `solution.asm`:
+```asm
 global _start
+
 _start:
-        mov r12, 0XCAFED00D1337BEEF
-	mov rsp, 0x31337
-	mov rax, 0x1337
+    mov r12, 0xCAFED00D1337BEEF
+    mov rsp, 0x31337
+    mov rax, 0x1337
+```
 
-3 - :~ nasm -f elf64 solution.asm -o solution.o
-4 - :~ ld solution.o -o solution
-5 - :~ /challenge/run /home/hacker/solution
-6 - :~ flag received, the output can be seen in level-2.png!
+> Note: This code sets the required registers. Some challenge runners read registers without needing the process to exit; if your runner requires the program to exit, you'll need to adjust the code so the exit syscall doesn't overwrite the required register values at the time of checking.
 
+3. Assemble:
+```bash
+nasm -f elf64 solution.asm -o solution.o
+```
 
-# Notes:
+4. Link:
+```bash
+ld solution.o -o solution
+```
 
-another simple challenge, i recommend to always execute /challenge/run as soon as you enter the challenge to view more information.
+5. Run the challenge:
+```bash
+/challenge/run /home/hacker/solution
+```
 
-step by step explained >>
+6. Result:
+ as- Flag received — output saved in `level-2.png`.
 
-1 >> creating an assembly file with nano solution.asm which will contain our code to capture the flag.
+# Notes
 
-2 >> the code!
+Another simple challenge. I recommend running `/challenge/run` as soon as you enter the challenge to see additional information.
 
-3 >>
+## Steps explained
 
-global _start -> declares the entry point for the linker.
-_start: -> line where execution begins.
-mov r12, 0XCAFED00D1337BEEF -> sets the register R12 to 0xCAFED00D1337BEEF as requested by the challenge.
-mov rsp, 0x31337 -> sets the register RSP to 0x31337 as requested by the challenge.
-mov rax, 0x1337	-> sets the register RAX to 0x1337 as requested by the challenge.
- 
-4 >> linking the object file with LD, ld combines object files and libraries into a executable by resolving symbols, arranging sections, and producing the binary.
+1. **Create the assembly file**: `nano solution.asm` — the file will contain our code to capture the flag.
 
-5 >> running /challenge/run command with the path to our executable, now the challenge will override and verify if all the requisites are completed and return the flag if succeed.
+2. **Assembly code**:
+- `global _start` → declares the entry point for the linker.  
+- `_start:` → label where execution begins.  
+- `mov r12, 0xCAFED00D1337BEEF` → sets R12 as requested.  
+- `mov rsp, 0x31337` → sets RSP as requested.  
+- `mov rax, 0x1337` → sets RAX as requested.  
 
-6 >> flag received! :D
+3. **Assemble**: `nasm` converts the human-readable assembly into an object file (`solution.o`) — machine code + info for the linker. Use `-f elf64` for 64-bit Linux.
+
+4. **Link**: `ld solution.o -o solution` produces the final executable.
+
+5. **Run**: `/challenge/run /home/hacker/solution` submits the executable to the challenge environment, which verifies the registers and returns the flag if requirements are met.
+
+6. **Flag**: Output captured in `level-2.png`.
