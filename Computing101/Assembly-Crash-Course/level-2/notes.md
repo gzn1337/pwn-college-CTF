@@ -43,7 +43,7 @@ ld solution.o -o solution
 ```
 
 6. Result:
- as- Flag received — output saved in `level-2.png`.
+- Flag received — output saved in `level-2.png`.
 
 # Notes
 
