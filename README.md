@@ -17,7 +17,7 @@ aimed at learning and sharing practical cybersecurity knowledge.
 
 ## Goals  
 ```
-- Build a practical **knowledge base** covering:  
+- Build a practical knowledge base covering:  
   - Assembly 
   - Binary exploitation 
   - Reverse engineering  
