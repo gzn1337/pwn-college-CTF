@@ -34,4 +34,11 @@ I decided to create this repository to improve my cybersecurity skills by writin
 to helping others who have difficulty solving any PwnCollege challenge, and who just want to read about them.  
 It will grow as I progress through PwnCollege and other CTFs.  
 Feedback, questions, and pull requests are welcome.
+
+## Conclusion
+
+I created this repository to enhance my cybersecurity skills
+by documenting challenges and helping others who have difficulty with PwnCollege tasks.
+It will grow as i progress through PwnCollege and other CTFs.
+Feedback, questions, and pull requests are welcome! :)
 ```
