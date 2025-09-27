@@ -1,6 +1,7 @@
 # PwnCollege — Cybersecurity
 ```
-This repository is a collection of solutions and structured notes, aimed at learning and sharing practical cybersecurity knowledge.
+This repository is a collection of solutions and structured notes
+aimed at learning and sharing practical cybersecurity knowledge.
 ```
 ---
 
