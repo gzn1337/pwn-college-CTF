@@ -1,6 +1,6 @@
 # PwnCollege — Cybersecurity
 ```
-This repository is a collection of solutions and structured notes
+This repository is a collection of solutions and structured notes,
 aimed at learning and sharing practical cybersecurity knowledge.
 ```
 ---
@@ -30,7 +30,8 @@ aimed at learning and sharing practical cybersecurity knowledge.
 
 ## Conclusion
 ```
-I decided to create this repository to improve my cybersecurity skills by writing about the challenges and helping others who have difficulty solving any PwnCollege challenge or just want to read about them.  
+I decided to create this repository to improve my cybersecurity skills by writing about the challenges,
+to helping others who have difficulty solving any PwnCollege challenge, and who just want to read about them.  
 It will grow as I progress through PwnCollege and other CTFs.  
 Feedback, questions, and pull requests are welcome.
 ```
