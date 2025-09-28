@@ -55,7 +55,7 @@ Another simple challenge. I recommend running `/challenge/run` as soon as you en
 
 2. **Assembly code**:
 - `global _start` → declares the entry point for the linker.  
-- `_start:` → label where execution begins.  
+- `_start:` → line where execution begins.  
 - `mov r12, 0xCAFED00D1337BEEF` → sets R12 as requested.  
 - `mov rsp, 0x31337` → sets RSP as requested.  
 - `mov rax, 0x1337` → sets RAX as requested.  

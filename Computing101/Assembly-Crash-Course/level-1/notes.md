@@ -49,11 +49,11 @@ This is the first flag from the Assembly Crash Course dojo, and is very simple. 
 
 2. **Assembly code**:
 
-- global _start -> declares the entry point for the linker.
-- _start: -> line where execution begins.
-- mov rdi, 0x1337 -> sets register RDI as requested by the challenge.
-- mov rax, 60 -> 60 is the syscall number for 'exit' in 64 bits Linux.
-- syscall -> executes the syscall above to exit the program.
+- `global _start` -> declares the entry point for the linker.
+- `_start:` -> line where execution begins.
+- `mov rdi, 0x1337` -> sets register RDI as requested by the challenge.
+- `mov rax, 60` -> 60 is the syscall number for 'exit' in 64 bits Linux.
+- `syscall` -> executes the syscall above to exit the program.
 
 3. **Assemble**: `nasm` convertes the human-readable assembly into an object file (`solution.o`) - machine code + info for the linker. Use `-f elf64` for 64-bits Linux.
 
