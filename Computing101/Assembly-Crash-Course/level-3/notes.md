@@ -34,7 +34,7 @@ nano solution.asm
 ```
 
 2. Write the following in `solution.asm`:
-```bash
+```asm
 global _start
 
 _start:
