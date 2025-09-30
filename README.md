@@ -33,5 +33,5 @@ aimed at learning and sharing practical cybersecurity knowledge.
 I created this repository to enhance my cybersecurity skills
 by documenting challenges and helping others who have difficulty with PwnCollege tasks.
 It will grow as i progress through PwnCollege and other CTFs.
-Feedback, questions, and pull requests are welcome! :)
+Feedback and questions are welcome! :)
 ```
