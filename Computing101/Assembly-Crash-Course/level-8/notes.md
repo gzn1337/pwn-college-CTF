@@ -60,19 +60,20 @@ ld solution.o -o solution
 
 Move the lower 8 bits of rdi into al and the lower 16 bits of rsi into bx to compute the modulo values.
 
-rdi % 256
-256 = 100000000 in binary
-this is 2^8 = 8 bits (seperating with the right way you will know this is the lower 8 bits and not upper)
-rdi 8 bits lower = dil (we have to put this in rax, but we cant move a 8 bits to a 64 bits register (rax), we gonna move to the same amount of bits register of rax which is al (lower)
 
-rsi % 65536
-65536 = 10000000000000000 in binary
-this is 2^16 = 16 bits 
-rsi 16 bits = si (we have to put this in rbx, but we cant. 16 bits rbx register is bx.
 
-result: 
+    rdi % 256 → 256 = 100000000 in binary = 2^8 → 8 bits.
+    The lower 8 bits of rdi are in dil. We need to put this in rax, but we cannot move an 8-bit register directly to a 64-bit register, so we move it to the 8-bit lower part of rax, which is al.
+
+    rsi % 65536 → 65536 = 10000000000000000 in binary = 2^16 → 16 bits.
+    The lower 16 bits of rsi are in si. We need to put this in rbx, but we cannot move a 16-bit value directly to a 64-bit register, so we move it to the 16-bit lower part of rbx, which is bx.
+
+resulting code:
+
+```asm
 mov al, dil
 mov bx, si
+```
 
 ## Steps explained
 
