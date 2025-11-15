@@ -10,17 +10,14 @@ This repository gathers solutions, clear explanations, and study material create
 
 Each challenge folder should contain:
 
-- Solution files 
-- Notes - clear walkthrough and explanations  
-- Optional - screenshots with outputs or flags
+- Notes - description and explanations about the challenge.
+- Solution - step-by-step instructions to solve the challenge.
 
 ---
 
 ## 🧭 Index
 
-- [Computing101](pwn-college-CTF/Computing101)  
-
-- ...  
+- [Computing101](pwn-college-CTF/Computing101)   
 
 ---
 
