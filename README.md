@@ -1,37 +1,44 @@
-# PwnCollege — Cybersecurity
-```
-This repository is a collection of solutions and structured notes,
-aimed at learning and sharing practical cybersecurity knowledge.
-```
+# Pwn.College — Cybersecurity Writeups
+
+Aprendizado prático de segurança da informação através de writeups estruturados, notas técnicas e resolução de desafios.
+
 ---
 
+## 📘 About the repository
 
-## Each challenge folder should contain:
-```
-- solution files 
-- notes - clear walkthrough and explanations  
-- optional - screenshots with outputs or flags
-```
+This repository gathers solutions, clear explanations, and study material created throughout my progress in **PwnCollege** challenges.
+
+Each challenge folder should contain:
+
+- Solution files 
+- Notes - clear walkthrough and explanations  
+- Optional - screenshots with outputs or flags
+
 ---
 
+## 🧭 Index
 
-## Goals  
-```
+- [Computing101](pwn-college-CTF/Computing101)  
+
+- ...  
+
+---
+
+## 🎯 Goals
+
 - Build a practical knowledge base covering:  
   - Assembly 
   - Binary exploitation 
   - Reverse engineering  
   - Cryptography  
   - Web vulnerabilities
-  - Produce clear, reproducible write-ups to improve my skills and help others learn.
-``` 
+  - Produce clear, reproducible write-ups to improve my skills and help others learn. 
+
 ---
 
+## 📝 Conclusion
 
-## Conclusion
-```
 I created this repository to enhance my cybersecurity skills
 by documenting challenges and helping others who have difficulty with PwnCollege tasks.
 It will grow as i progress through PwnCollege and other CTFs.
 Feedback and questions are welcome! :)
-```
