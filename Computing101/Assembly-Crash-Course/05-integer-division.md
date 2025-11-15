@@ -78,14 +78,19 @@ Simple challenge, just a simple math operation, takes more time to read the desc
 
 1. **Create the assembly file**: `nano solution.asm` — the file will contain our code to capture the flag.
 
+
 2. **Assembly code**:
 - `global _start` → declares the entry point for the linker.
 - `_start:` → line where execution begins.
 - `mov rax, rdi` -> moving **rdi** to **rax** -- speed(rax) = distance(rdi)
 - `div rsi` -> divide the 128-bit value in rdx:rax by **rsi**, storing the quotient in **rax** and the remainder in **rdx**
+
+
 3. **Assemble**: `nasm` converts the human-readable assembly into an object file (`solution.o`) — machine code + info for the linker. Use `-f elf64` for 64-bit Linux.
 
+
 4. **Link**: `ld solution.o -o solution` produces the final executable.
+
 
 5. **Run**: `/challenge/run /home/hacker/solution` submits the executable to the challenge environment, which verifies the registers and returns the flag if requirements are met.
 

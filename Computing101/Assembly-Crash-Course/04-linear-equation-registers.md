@@ -65,15 +65,20 @@ rax = f(x) = m*x + b
 
 1. **Create the assembly file**: `nano solution.asm` — the file will contain our code to capture the flag.
 
+
 2. **Assembly code**:
 - `global _start` -> declares the entry point for the linker.
 - `_start:` -> line where execution begins.
 - `imul rdi, rsi` -> multiply **rdi** (m) by **rsi** (x).
 - `add rdx, rdi` -> add the multiplication result in **rdi** to **rdx**(b).
 - `mov rax, rdx` -> moving the result to **rax** register as requested.
+
+
 3. **Assemble**: `nasm` converts the human-readable assembly into an object file (`solution.o`) — machine code + info for the linker. Use `-f elf64` for 64-bit Linux.
 
+
 4. **Link**: `ld solution.o -o solution` produces the final executable.
+
 
 5. **Run**: `/challenge/run /home/hacker/solution` submits the executable to the challenge environment, which verifies the registers and returns the flag if requirements are met.
 

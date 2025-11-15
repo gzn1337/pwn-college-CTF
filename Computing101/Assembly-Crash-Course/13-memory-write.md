@@ -45,14 +45,18 @@ here we store into **0x404000** address, the value helds by **rax**.
 
 1. **Create the assembly file**: `nano solution.asm` — the file will contain our code to capture the flag.
 
+
 2. **Assembly code**:
 - `global _start` → declares the entry point for the linker.
 - `_start:` → line where execution begins.
 - `mov [0x404000], rax` →  store into 0x404000 address, what is inside the rax.
  
+
 3. **Assemble**: `nasm` converts the human-readable assembly into an object file (`solution.o`) — machine code + info for the linker. Use `-f elf64` for 64-bit Linux.
 
+
 4. **Link**: `ld solution.o -o solution` produces the final executable.
+
 
 5. **Run**: `/challenge/run /home/hacker/solution` submits the executable to the challenge environment, which verifies the registers and returns the flag if requirements are met.
 

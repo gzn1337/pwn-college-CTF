@@ -94,15 +94,19 @@ first we shift right 32 bytes in rdi, to put the 5th byte (B4) to (B0, least sig
 
 1. **Create the assembly file**: `nano solution.asm` — the file will contain our code to capture the flag.
 
+
 2. **Assembly code**:
 - `global _start` → declares the entry point for the linker.
 - `_start:` → line where execution begins.
 - `shr rdi, 32` → shift **rdi** right by 32 bits to bring the 5th least significant byte (B4) down to the lowest byte position.
 - `mov al, dil` → move the lowet 8 bits of **rdi** (dil) into the lowest 8 bits of **rax** (al).
 
+
 3. **Assemble**: `nasm` converts the human-readable assembly into an object file (`solution.o`) — machine code + info for the linker. Use `-f elf64` for 64-bit Linux.
 
+
 4. **Link**: `ld solution.o -o solution` produces the final executable.
+
 
 5. **Run**: `/challenge/run /home/hacker/solution` submits the executable to the challenge environment, which verifies the registers and returns the flag if requirements are met.
 

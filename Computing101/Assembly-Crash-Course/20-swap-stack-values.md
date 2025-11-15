@@ -63,6 +63,7 @@ this challenge we work with stack operations.
 
 1. **Create the assembly file**: `nano solution.asm` — the file will contain our code to capture the flag.
 
+
 2. **Assembly code**:
 - `global _start` → declares the entry point for the linker.
 - `_start:` → line where execution begins.
@@ -73,9 +74,12 @@ this challenge we work with stack operations.
 - `pop rsi` → pops the next value (original rdi) into rsi, completing the swap.
 - `pop rdi` → pops the last value (original rsi) to clean up the stack.
 
+
 3. **Assemble**: `nasm` converts the human-readable assembly into an object file (`solution.o`) — machine code + info for the linker. Use `-f elf64` for 64-bit Linux.
 
+
 4. **Link**: `ld solution.o -o solution` produces the final executable.
+
 
 5. **Run**: `/challenge/run /home/hacker/solution` submits the executable to the challenge environment, which verifies the registers and returns the flag if requirements are met.
 

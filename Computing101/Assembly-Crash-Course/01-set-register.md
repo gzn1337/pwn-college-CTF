@@ -44,6 +44,7 @@ This is the first flag from the Assembly Crash Course dojo, and is very simple. 
 
 1. **Create the assembly file**: `nano solution.asm` - the file will contain our code to capture the flag.
 
+
 2. **Assembly code**:
 
 - `global _start` -> declares the entry point for the linker.
@@ -52,9 +53,11 @@ This is the first flag from the Assembly Crash Course dojo, and is very simple. 
 - `mov rax, 60` -> 60 is the syscall number for 'exit' in 64 bits Linux.
 - `syscall` -> executes the syscall above to exit the program.
 
+
 3. **Assemble**: `nasm` convertes the human-readable assembly into an object file (`solution.o`) - machine code + info for the linker. Use `-f elf64` for 64-bits Linux.
+
 
 4. **Link**: `ld solution.o -o solution` produces the final executable.
 
-5. **Run** `/challnege/run /home/hacker/solution` submits the executable to the challenge environment, which will verify the registers and return the flag if requirements are met.
 
+5. **Run** `/challnege/run /home/hacker/solution` submits the executable to the challenge environment, which will verify the registers and return the flag if requirements are met.

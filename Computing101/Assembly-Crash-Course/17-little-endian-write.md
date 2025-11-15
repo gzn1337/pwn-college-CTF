@@ -76,6 +76,7 @@ write given constants into addresses provided in **rdi** and **rsi**, avoid usin
 
 1. **Create the assembly file**: `nano solution.asm` — the file will contain our code to capture the flag.
 
+
 2. **Assembly code**:
 - `global _start` → declares the entry point for the linker.
 - `_start:` → line where execution begins.
@@ -84,8 +85,11 @@ write given constants into addresses provided in **rdi** and **rsi**, avoid usin
 - `mov rcx, 0xc0ffee0000` → load 64 bit constant into **rcx**.
 - `mov [rsi], rcx` → store **rcx** into memory at address in **rsi**.
 
+
 3. **Assemble**: `nasm` converts the human-readable assembly into an object file (`solution.o`) — machine code + info for the linker. Use `-f elf64` for 64-bit Linux.
 
+
 4. **Link**: `ld solution.o -o solution` produces the final executable.
+
 
 5. **Run**: `/challenge/run /home/hacker/solution` submits the executable to the challenge environment, which verifies the registers and returns the flag if requirements are met.
