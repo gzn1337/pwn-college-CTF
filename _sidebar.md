@@ -1,5 +1,0 @@
-- [Início](/)
-- [Writeups](/writeups/)
-  - [Categoria 1](pwn-college-CTF/Computing101)
-    - [Computing101](pwn-college-CTF/Computing101/Assembly-Crash-Course/)
-      - [Writeup 1](/pwn-college-CTF/Computing101/Assembly-Crash-Course/01-set-register.md)

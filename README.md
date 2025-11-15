@@ -1,9 +1,5 @@
 # Pwn.College — Cybersecurity Writeups
 
-Aprendizado prático de segurança da informação através de writeups estruturados, notas técnicas e resolução de desafios.
-
----
-
 ## 📘 About the repository
 
 This repository gathers solutions, clear explanations, and study material created throughout my progress in **PwnCollege** challenges.
@@ -17,7 +13,7 @@ Each challenge folder should contain:
 
 ## 🧭 Index
 
-- [Computing101](pwn-college-CTF/Computing101)   
+- [Assembly Crash Course](/Computing101/Assembly-Crash-Course)   
 
 ---
 
